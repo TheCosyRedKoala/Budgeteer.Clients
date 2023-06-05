@@ -1,0 +1,8 @@
+﻿@using TCRK.Models.Budgeteer.Budgets
+
+<MudGrid Justify="Justify.FlexStart">
+    @foreach (BudgetDto.Index budget in Budgets)
+    {
+        <BudgetCard Budget="budget" GetBudgetsAsync="GetBudgetsAsync" />
+    }
+</MudGrid>

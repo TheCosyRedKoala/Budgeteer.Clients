@@ -1,0 +1,9 @@
+﻿<MudForm Model="_model" @ref="_form" Validation="@(_budgetValidator.ValidateValue)" ValidationDelay="0">
+    <MudTextField @bind-Value="_model.Name" Label="Name" Variant="Variant.Outlined" Class="mb-3" For="@(() => _model.Name)" Immediate="true" />
+    <MudButton Color="Color.Success" StartIcon="@Icons.Material.Filled.Save" Variant="Variant.Filled" FullWidth="true" Class="mb-3" OnClick="Submit">
+        Save
+    </MudButton>
+    <MudButton Color="Color.Error" StartIcon="@Icons.Material.Filled.Cancel" Variant="Variant.Filled" FullWidth="true" OnClick="Cancel">
+        Cancel
+    </MudButton>
+</MudForm>

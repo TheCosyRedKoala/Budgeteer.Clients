@@ -1,0 +1,15 @@
+﻿@using Budgeteer.Clients.WebApplication.Pages.Budgets.Components
+@using Budgeteer.Clients.WebApplication.Shared.Components
+
+@page "/budgets"
+
+@if (_budgets is null)
+{
+    <LoadingSpinner />
+}
+else 
+{
+    <IndexActions GetBudgetsAsync="GetBudgetsAsync" />
+
+    <BudgetGrid Budgets="_budgets" GetBudgetsAsync="GetBudgetsAsync" />
+}
